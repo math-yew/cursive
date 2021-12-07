@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Using an existing canvas to draw on</title>
+    <style>
+
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&family=Raleway:wght@600&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="./dist/html2canvas.js"></script>
+</head>
+<body>
+  <div class="half">
+
+    <div id="content">
+      <div class="main">
+        <div class="letter ab playfair" id="letter">M</div>
+        <div class="ab" id="slide">
+          <!-- <div class=""><img crossOrigin="Anonymous" src="https://raw.githubusercontent.com/math-yew/mono/b10063c719329d3e0e47f7dde44e17b7ccbbe438/decoration.svg" width="100%"></div> -->
+          <div class=""><img crossOrigin="Anonymous" src="https://raw.githubusercontent.com/math-yew/mono/7e9dbcb6e95b18110034b8e3d655d4e38f3d401b/decoration.svg" width="100%"></div>
+          <div class="name" id="name">
+              Mecham
+          </div>
+          <div class=""><img crossOrigin="Anonymous" src="https://raw.githubusercontent.com/math-yew/mono/7e9dbcb6e95b18110034b8e3d655d4e38f3d401b/decoration.svg" width="100%" class="flip"></div>
+          <!-- <div class=""><img crossOrigin="Anonymous" src="https://raw.githubusercontent.com/math-yew/mono/b10063c719329d3e0e47f7dde44e17b7ccbbe438/decoration.svg" width="100%" class="flip"></div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="half">
+    <br/>
+    <input type="text" name="" value="" id="nameInput"/>
+    <button id="generate">Generate</button>
+    <br/>
+
+    <input type="text" name="" value="" id="position"/>
+    <button onclick="updatePosition()" id="updatePosition">Change Position</button>
+    <br/>
+
+    <input type="text" name="" value="" id="fontSize"/>
+    <button onclick="updateSize()" id="updateSize">Change Size</button>
+    <br/>
+
+    <select onchange="changeFont()" id="fonts">
+        <option>Choose a font</option>
+    </select>
+
+    <br/>
+    <br/>
+    <button id="create">Create</button>
+  </div>
+
+  <div style="display:none">
+    <canvas width="3325" height="4655"></canvas>
+  </div>
+
+
+  <br/>
+  <!-- <button id='go'>Download 1.5X</button> -->
+  <script type="text/javascript" src='script.js'></script>
+
+</body>
+</html>
